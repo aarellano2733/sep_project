@@ -69,7 +69,7 @@ namespace ExcelConversion
                     RowColIndexes fibEngineerIndexes = GetTableRowColIndexesForExactMatch(workSheetCoverLocInfo, "Fiber Engineer");
                     RowColIndexes feRelDateIndexes = GetTableRowColIndexesForExactMatch(workSheetCoverLocInfo, "Release Date");
                     RowColIndexes ospPmIndexes = GetTableRowColIndexesForExactMatch(workSheetCoverLocInfo, "OSP PM");
-                    RowColIndexes releaseNoIndexes = GetTableRowColIndexesForExactMatch(workSheetCoverLocInfo, "Release #:");
+                    //RowColIndexes releaseNoIndexes = GetTableRowColIndexesForExactMatch(workSheetCoverLocInfo, "Release #:");
                     RowColIndexes subfloorIndexes = GetTableRowColIndexesForExactMatch(workSheetCoverLocInfo, "Sub Floor / Parking");
                     //RowColIndexes splicePointIndexes = GetTableRowColIndexesForExactMatch(workSheetCoverLocInfo, "Splice Point #:");
                     RowColIndexes floorCLLIIndexes = GetTableRowColIndexesForExactMatch(workSheetCoverLocInfo, "Floor CLLI Output");
@@ -100,7 +100,7 @@ namespace ExcelConversion
                     {
                         splicePoint = x.Table.Rows[spliceIndexes.rowIndex + 1][spliceIndexes.colIndex + 2].ToString().Trim()/* + x.Table.Rows[spliceIndexes.rowIndex + 1][spliceIndexes.colIndex + 1].ToString().Trim()*/,
                         release = x.Table.Rows[releaseIndexes.rowIndex + 1][releaseIndexes.colIndex + 3].ToString().Trim() + x.Table.Rows[releaseIndexes.rowIndex][releaseIndexes.colIndex + 2].ToString().Trim(),
-                        address = x.Table.Rows[addressIndexes.rowIndex + 1][addressIndexes.colIndex].ToString().Trim(),
+                        address = x.Table.Rows[addressIndexes.rowIndex][addressIndexes.colIndex].ToString().Trim(),
                         city = x.Table.Rows[cityStateIndexes.rowIndex + 1][cityStateIndexes.colIndex].ToString().Trim(),
                         floorNo = x.Table.Rows[floorNumberIndexes.rowIndex + 1][floorNumberIndexes.colIndex].ToString().Trim(),
                         room = x.Table.Rows[roomCageIndexes.rowIndex + 2][roomCageIndexes.colIndex + 1].ToString().Trim(),
@@ -114,29 +114,29 @@ namespace ExcelConversion
                         ospPM = x.Table.Rows[ospPmIndexes.rowIndex + 1][ospPmIndexes.colIndex].ToString().Trim(),
                         //releaseNo = x.Table.Rows[releaseNoIndexes.rowIndex + 1][releaseNoIndexes.colIndex].ToString().Trim(),
                         subFloor = x.Table.Rows[subfloorIndexes.rowIndex + 1][subfloorIndexes.colIndex].ToString().Trim(),
-                        splicePointNo = x.Table.Rows[spliceIndexes.rowIndex + 1][spliceIndexes.colIndex].ToString().Trim(),
+                        //splicePointNo = x.Table.Rows[spliceIndexes.rowIndex + 1][spliceIndexes.colIndex].ToString().Trim(),
                         floorCLLI = x.Table.Rows[floorCLLIIndexes.rowIndex + 1][floorCLLIIndexes.colIndex].ToString().Trim(),
-                        //manhole = x.Table.Rows[manholeIndexes.rowIndex + 1][manholeIndexes.colIndex].ToString().Trim(),
-                        //manholeHandholeNo = x.Table.Rows[manhandHoleNumberIndexes.rowIndex + 1][manhandHoleNumberIndexes.colIndex].ToString().Trim(),
-                        //owner = x.Table.Rows[ownerIndexes.rowIndex + 1][ownerIndexes.colIndex].ToString().Trim(),
-                        //manholeHandholeOwnedBy = x.Table.Rows[mhhhOwnerIndexes.rowIndex + 1][mhhhOwnerIndexes.colIndex].ToString().Trim(),
-                        //mfnBackbone = x.Table.Rows[mfnBackboneIndexes.rowIndex + 1][mfnBackboneIndexes.colIndex].ToString().Trim(),
-                        //facilitiesEngineer = x.Table.Rows[facEngineerIndexes.rowIndex + 1][facEngineerIndexes.colIndex].ToString().Trim(),
-                        //otherSplicePointsInEnclosure = x.Table.Rows[otherSpliceIndexes.rowIndex + 1][otherSpliceIndexes.colIndex].ToString().Trim(),
-                        //dirFacilitiesMgmt = x.Table.Rows[dirFacMgmtIndexes.rowIndex + 1][dirFacMgmtIndexes.colIndex].ToString().Trim(),
-                        //dirFacilitiesMgmtDate = x.Table.Rows[dirFacMgmtDateIndexes.rowIndex + 1][dirFacMgmtDateIndexes.colIndex].ToString().Trim(),
-                        //dirNetworkEngineering = x.Table.Rows[dirNetEngIndexes.rowIndex + 1][dirNetEngIndexes.colIndex].ToString().Trim(),
-                        //dirNetworkEngineeringDate = x.Table.Rows[dirNetEngDateIndexes.rowIndex + 1][dirNetEngDateIndexes.colIndex].ToString().Trim(),
-                        //vpNetworkEngineering = x.Table.Rows[vpNetEngIndexes.rowIndex + 1][vpNetEngDateIndexes.colIndex].ToString().Trim(),
-                        //vpNetworkEngineeringDate = x.Table.Rows[vpNetEngDateIndexes.rowIndex + 1][vpNetEngDateIndexes.colIndex].ToString().Trim(),
-                        //floor = x.Table.Rows[floorIndexes.rowIndex + 1][floorIndexes.colIndex].ToString().Trim(),
-                        //racks = x.Table.Rows[rackIndexes.rowIndex + 1][rackIndexes.colIndex].ToString().Trim(),
-                        //otherSplicePointsInNode = x.Table.Rows[otherSplicesNodeIndexes.rowIndex + 1][otherSplicesNodeIndexes.colIndex].ToString().Trim(),
-                        //notes = x.Table.Rows[notesIndexes.rowIndex + 1][notesIndexes.colIndex].ToString().Trim(),
-                        //customerInfo = x.Table.Rows[customerInfoIndexes.rowIndex + 1][customerInfoIndexes.colIndex].ToString().Trim(),
-                        //handholeOrPoleNo = x.Table.Rows[hhPoleNumberIndexes.rowIndex + 1][hhPoleNumberIndexes.colIndex].ToString().Trim(),
-                        //manholeOrPoleNo = x.Table.Rows[mhPoleOwnedByIndexes.rowIndex + 1][mhPoleOwnedByIndexes.colIndex].ToString().Trim(),
-                        //otherSplicePointsInManhole = x.Table.Rows[otherSpliceMHIndexes.rowIndex + 1][otherSpliceMHIndexes.colIndex].ToString().Trim(),
+                        manhole = x.Table.Rows[manholeIndexes.rowIndex + 1][manholeIndexes.colIndex].ToString().Trim(),
+                        manholeHandholeNo = x.Table.Rows[manhandHoleNumberIndexes.rowIndex + 1][manhandHoleNumberIndexes.colIndex].ToString().Trim(),
+                        owner = x.Table.Rows[ownerIndexes.rowIndex + 1][ownerIndexes.colIndex].ToString().Trim(),
+                        manholeHandholeOwnedBy = x.Table.Rows[mhhhOwnerIndexes.rowIndex + 1][mhhhOwnerIndexes.colIndex].ToString().Trim(),
+                        mfnBackbone = x.Table.Rows[mfnBackboneIndexes.rowIndex + 1][mfnBackboneIndexes.colIndex].ToString().Trim(),
+                        facilitiesEngineer = x.Table.Rows[facEngineerIndexes.rowIndex + 1][facEngineerIndexes.colIndex].ToString().Trim(),
+                        otherSplicePointsInEnclosure = x.Table.Rows[otherSpliceIndexes.rowIndex + 1][otherSpliceIndexes.colIndex].ToString().Trim(),
+                        dirFacilitiesMgmt = x.Table.Rows[dirFacMgmtIndexes.rowIndex + 1][dirFacMgmtIndexes.colIndex].ToString().Trim(),
+                        dirFacilitiesMgmtDate = x.Table.Rows[dirFacMgmtDateIndexes.rowIndex + 1][dirFacMgmtDateIndexes.colIndex].ToString().Trim(),
+                        dirNetworkEngineering = x.Table.Rows[dirNetEngIndexes.rowIndex + 1][dirNetEngIndexes.colIndex].ToString().Trim(),
+                        dirNetworkEngineeringDate = x.Table.Rows[dirNetEngDateIndexes.rowIndex + 1][dirNetEngDateIndexes.colIndex].ToString().Trim(),
+                        vpNetworkEngineering = x.Table.Rows[vpNetEngIndexes.rowIndex + 1][vpNetEngDateIndexes.colIndex].ToString().Trim(),
+                        vpNetworkEngineeringDate = x.Table.Rows[vpNetEngDateIndexes.rowIndex + 1][vpNetEngDateIndexes.colIndex].ToString().Trim(),
+                        floor = x.Table.Rows[floorIndexes.rowIndex + 1][floorIndexes.colIndex].ToString().Trim(),
+                        racks = x.Table.Rows[rackIndexes.rowIndex + 1][rackIndexes.colIndex].ToString().Trim(),
+                        otherSplicePointsInNode = x.Table.Rows[otherSplicesNodeIndexes.rowIndex + 1][otherSplicesNodeIndexes.colIndex].ToString().Trim(),
+                        notes = x.Table.Rows[notesIndexes.rowIndex + 1][notesIndexes.colIndex].ToString().Trim(),
+                        customerInfo = x.Table.Rows[customerInfoIndexes.rowIndex + 1][customerInfoIndexes.colIndex].ToString().Trim(),
+                        handholeOrPoleNo = x.Table.Rows[hhPoleNumberIndexes.rowIndex + 1][hhPoleNumberIndexes.colIndex].ToString().Trim(),
+                        manholeOrPoleNo = x.Table.Rows[mhPoleOwnedByIndexes.rowIndex + 1][mhPoleOwnedByIndexes.colIndex].ToString().Trim(),
+                        otherSplicePointsInManhole = x.Table.Rows[otherSpliceMHIndexes.rowIndex + 1][otherSpliceMHIndexes.colIndex].ToString().Trim(),
                     }).First();
                 }
             }
