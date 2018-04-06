@@ -50,20 +50,20 @@
         public int colIndex { get; set; }
     }
 
-    public class MapVal {
-        public string fieldName { get; set; }
-        public string fieldLabel { get; set; }
+    //public class MapVal {
+    //    public string fieldName { get; set; }
+    //    public string fieldLabel { get; set; }
 
-        public int relativePos { get; set; }
+    //    public int relativePos { get; set; }
 
-        public int offset { get; set; }
-    }
+    //    public int offset { get; set; }
+    //}
 
-    public enum RelativePos
-    {
-       D = 0,
-       R = 1,
-       U = 2,
-       L = 3
-    }
+    //public enum RelativePos
+    //{
+    //   D = 0,
+    //   R = 1,
+    //   U = 2,
+    //   L = 3
+    //}
 }

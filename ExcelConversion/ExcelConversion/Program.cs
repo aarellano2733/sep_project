@@ -10,8 +10,8 @@ namespace ExcelConversion
     {
         static void Main(string[] args)
         {
-            string fileOutPath = @"D:\SEPs2.0\All-SEPs\Splice-100769.csv";
-            string fileInPath = @"D:\SEPs2.0\All-SEPs\Splice-100769.xlsm";
+            string fileOutPath = @"D:\SEPs2.0\SEPs\Splice-101789.csv";
+            string fileInPath = @"D:\SEPs2.0\SEPs\Splice-101789.xlsm";
             //instaniate class
             ConvertExcel convert = new ConvertExcel();
             //read from excel
